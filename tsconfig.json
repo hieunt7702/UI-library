@@ -1,0 +1,94 @@
+{
+  "compilerOptions": {
+    /* Cấu hình Dự Án */
+    // "incremental": true,  // Lưu file .tsbuildinfo để biên dịch gia tăng (chỉ biên dịch phần đã thay đổi).
+    // "composite": true,  // Bật các ràng buộc để dự án có thể dùng trong tham chiếu nhiều dự án TypeScript.
+    // "tsBuildInfoFile": "./.tsbuildinfo",  // Đường dẫn tới file lưu trữ thông tin biên dịch gia tăng.
+    // "disableSourceOfProjectReferenceRedirect": true,  // Tắt việc ưu tiên file source thay vì file .d.ts trong khi tham chiếu.
+    // "disableSolutionSearching": true,  // Không tìm kiếm tham chiếu dự án khi chỉnh sửa.
+    // "disableReferencedProjectLoad": true,  // Giảm số lượng dự án được load tự động.
+    /* Ngôn ngữ và Môi trường */
+    "target": "es2016", // Đầu ra JavaScript sẽ tương thích chuẩn ES2016.
+    // "lib": [],  // Chỉ định thư viện được bao gồm (ví dụ: DOM, ES2020).
+    "jsx": "react-jsx", // Cách xử lý JSX, mặc định giữ nguyên (dùng cho React).
+    // "jsxFactory": "",  // Hàm dùng để tạo phần tử JSX, ví dụ: React.createElement.
+    // "jsxFragmentFactory": "", // Hàm xử lý fragment JSX, ví dụ: React.Fragment.
+    // "jsxImportSource": "",  // Dùng với "jsx: react-jsx" để import hàm xử lý JSX.
+    // "reactNamespace": "",  // Namespace khi dùng với React cũ (ít dùng).
+    // "noLib": true,  // Không bao gồm bất kỳ thư viện mặc định nào.
+    // "useDefineForClassFields": true,  // Tuân thủ chuẩn ECMAScript trong việc định nghĩa field trong class.
+    // "moduleDetection": "auto",  // Cách TypeScript nhận biết đâu là module.
+    /* Module */
+    "module": "nodenext", // Loại module đầu ra, dùng nhiều với Node.js.
+    // "rootDir": "./",  // Thư mục gốc chứa file source.
+    "moduleResolution": "nodenext", // Cách tìm file khi import (node hoặc classic).
+    "baseUrl": "./", // Cơ sở để resolve import không tương đối.
+    "paths": {
+      "@components/*": [
+        "src/components/*"
+      ]
+    }, // Định nghĩa alias đường dẫn cho import.
+    // "typeRoots": [],  // Thư mục chứa các gói định nghĩa kiểu.
+    // "types": [],  // Tên các package chứa định nghĩa kiểu cần bao gồm.
+    // "resolveJsonModule": true,  // Cho phép import file .json.
+    // "allowArbitraryExtensions": true,  // Cho phép import file có đuôi bất kỳ nếu có file .d.ts đi kèm.
+    // "resolvePackageJsonExports": true,  // Dùng trường "exports" trong package.json để resolve.
+    // "resolvePackageJsonImports": true,  // Dùng trường "imports" trong package.json.
+    // "noResolve": true,  // Không cho phép mở rộng các file được import hoặc require.
+    /* Hỗ trợ JavaScript */
+    // "allowJs": true,  // Cho phép thêm file .js vào dự án.
+    // "checkJs": true,  // Kiểm tra lỗi cú pháp trong file .js.
+    // "maxNodeModuleJsDepth": 1,  // Mức độ đệ quy tối đa để kiểm tra file JS trong node_modules.
+    /* Cấu hình Xuất (Emit) */
+    // "declaration": true,  // Tạo file .d.ts để mô tả kiểu cho JS.
+    // "declarationMap": true,  // Tạo sourcemap cho file .d.ts.
+    // "emitDeclarationOnly": true,  // Chỉ xuất file .d.ts, không tạo file JS.
+    // "sourceMap": true,  // Tạo file sourcemap cho file JS đã biên dịch.
+    // "inlineSourceMap": true,  // Chèn source map vào trong file JS.
+    // "noEmit": true,  // Không xuất bất kỳ file nào khi biên dịch.
+    // "outFile": "./",  // Gộp tất cả đầu ra vào 1 file JS duy nhất.
+    // "outDir": "./",  // Thư mục chứa các file sau khi biên dịch.
+    // "removeComments": true,  // Xóa comment khỏi file đầu ra.
+    // "importHelpers": true,  // Dùng các hàm hỗ trợ từ thư viện tslib thay vì tạo mới mỗi lần.
+    // "downlevelIteration": true,  // Hỗ trợ lặp trong ES5 như `for..of` trên array.
+    // "inlineSources": true,  // Bao gồm source code trong sourcemap.
+    // "emitBOM": true,  // Thêm BOM (Byte Order Mark) vào đầu file.
+    // "newLine": "crlf",  // Dùng ký tự xuống dòng CRLF (Windows).
+    // "stripInternal": true,  // Bỏ qua export có đánh dấu `@internal`.
+    // "noEmitHelpers": true,  // Không phát sinh các helper như __extends.
+    // "noEmitOnError": true,  // Không xuất file nếu có lỗi.
+    // "preserveConstEnums": true,  // Không xóa const enum trong file đầu ra.
+    // "declarationDir": "./",  // Thư mục chứa file định nghĩa kiểu .d.ts.
+    /* Tương thích giữa các hệ thống */
+    // "isolatedModules": true,  // Mỗi file là một module riêng biệt.
+    // "verbatimModuleSyntax": true,  // Không thay đổi import/export, giữ nguyên cú pháp.
+    // "isolatedDeclarations": true,  // Chắc chắn các export có đủ kiểu để tạo file định nghĩa.
+    // "erasableSyntaxOnly": true,  // Cấm các cú pháp không nằm trong chuẩn ECMAScript.
+    // "allowSyntheticDefaultImports": true,  // Cho phép import mặc định kể cả khi module không có default export.
+    "esModuleInterop": true, // Hỗ trợ import module CommonJS như các module ES (giúp import mặc định hoạt động mượt mà).
+    // "preserveSymlinks": true,  // Không resolve symlink thật (dùng trong monorepo).
+    /* Kiểm tra Kiểu (Type Checking) */
+    "strict": true, // Bật tất cả các tùy chọn kiểm tra kiểu nghiêm ngặt.
+    // "noImplicitAny": true,  // Cảnh báo nếu biến không có kiểu và TypeScript gán kiểu `any`.
+    // "strictNullChecks": true,  // Kiểm tra biến có thể null hoặc undefined.
+    // "strictFunctionTypes": true,  // Kiểm tra tương thích kiểu của hàm khi gán.
+    // "strictBindCallApply": true,  // Kiểm tra tham số của bind/call/apply.
+    // "strictPropertyInitialization": true,  // Kiểm tra class property có được khởi tạo trong constructor không.
+    // "noImplicitThis": true,  // Cảnh báo nếu `this` có kiểu `any`.
+    // "useUnknownInCatchVariables": true,  // Biến lỗi trong try-catch mặc định là `unknown`.
+    // "alwaysStrict": true,  // Tự thêm `"use strict"` vào file đầu ra.
+    // "noUnusedLocals": true,  // Cảnh báo nếu biến local không dùng.
+    // "noUnusedParameters": true,  // Cảnh báo nếu tham số hàm không được dùng.
+    // "exactOptionalPropertyTypes": true,  // Không tự thêm `undefined` vào optional property.
+    // "noImplicitReturns": true,  // Cảnh báo nếu có nhánh nào trong hàm không trả về gì.
+    // "noFallthroughCasesInSwitch": true,  // Cảnh báo nếu `case` trong `switch` bị rơi xuống case kế tiếp mà không có `break`.
+    // "noUncheckedIndexedAccess": true,  // Khi truy cập object bằng index, sẽ thêm `undefined` vào kiểu trả về.
+    // "noImplicitOverride": true,  // Bắt buộc phải có từ khóa `override` khi ghi đè hàm từ lớp cha.
+    // "noPropertyAccessFromIndexSignature": true,  // Không cho truy cập thuộc tính trực tiếp nếu được định nghĩa bằng chỉ số `[key: string]`.
+    // "allowUnusedLabels": true,  // Không cảnh báo nếu label không được dùng.
+    // "allowUnreachableCode": true  // Không cảnh báo nếu có đoạn code không thể chạy tới.
+    /* Hoàn tất */
+    "forceConsistentCasingInFileNames": true, // Cảnh báo nếu tên file import khác biệt chữ hoa/thường.
+    "skipLibCheck": true // Bỏ qua việc kiểm tra type trong các thư viện (.d.ts).
+  }
+}
