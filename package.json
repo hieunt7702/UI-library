@@ -14,7 +14,7 @@
     "test": "jest --watchAll --verbose",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
-    "prepare": "husky",
+    "prepare": "node ./scripts/setup-husky.js",
     "lint": "eslint ./src/ --ext .ts,.tsx",
     "lint:fix": "eslint ./src --fix",
     "release": "standard-version"

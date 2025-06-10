@@ -1,12 +1,4 @@
-#!/bin/bash
-
-set -e  # Dừng script nếu có lỗi
-
-# echo "Running tests..."
+#!/usr/bin/env sh
 # npm run test
-
-echo "Running lint..."
 npm run lint
-
-echo "Running build..."
 npm run build
